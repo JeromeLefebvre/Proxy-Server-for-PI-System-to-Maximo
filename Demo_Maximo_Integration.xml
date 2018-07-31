@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.0.8628" ExportMode="AllReferences, NoUniqueID" PISystem="jpede-piaf-vm0" Database="Demo_Maximo_Integration" Description="" Created="2018-07-31T04:44:25.0789629Z" id="9fdb0255-40af-4410-8f93-8b66f57bafd7" ParentKey="c4db056e-fe04-4dcc-b124-80698c2661c8" ExportedObject="Demo_Maximo_Integration" ExportedType="AFDatabase" Identity="Database" PIPersist="161 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{c4db056e-fe04-4dcc-b124-80698c2661c8}\{9fdb0255-40af-4410-8f93-8b66f57bafd7}*jpede-piaf-vm0\Demo_Maximo_Integration">
+  <AFDeliveryFormat>
+    <Name>Global Default Email</Name>
+    <DeliveryChannel>Email</DeliveryChannel>
+    <Property>
+      <Name>Subject</Name>
+      <Value>&lt;FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:osiann="clr-namespace:OSIsoft.AN.Notification;assembly=OSIsoft.AF.Notification.DeliveryChannel.Email" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;&lt;Paragraph&gt;&lt;Span xml:space="preserve"&gt;&lt;osiann:ANInlineContent ContentID="9cfcde7e-9975-4aca-a6ba-47dc17119902" ContentProperty="0" PersistedContentName="" AdditionalData="" /&gt; generated a new notification event. &lt;/Span&gt; &lt;osiann:ANInlineContent ContentID="15628018-3792-4aad-b13f-ad324c406a84" ContentProperty="2" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;/FlowDocument&gt;</Value>
+    </Property>
+    <Property>
+      <Name>Body</Name>
+      <Value>&lt;FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:osiann="clr-namespace:OSIsoft.AN.Notification;assembly=OSIsoft.AF.Notification.DeliveryChannel.Email" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;&lt;Section&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Event: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="9cfcde7e-9975-4aca-a6ba-47dc17119902" ContentProperty="0" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Name: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="418df2db-58ed-4c27-97de-0a909bd8b2fe" ContentProperty="0" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Server: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="888f1705-c21e-49cb-8941-89ecc83ef8c1" ContentProperty="0" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Database: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="a5407735-c1da-4659-8b46-0c82a2450d30" ContentProperty="0" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Start Time: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="9cfcde7e-9975-4aca-a6ba-47dc17119902" ContentProperty="2001" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Target: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="67fad554-031e-4e5f-9798-7ebccb4e909e" ContentProperty="1000" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Severity: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="9cfcde7e-9975-4aca-a6ba-47dc17119902" ContentProperty="2004" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Bold xml:space="preserve"&gt;Send Time: &lt;/Bold&gt;&lt;osiann:ANInlineContent ContentID="418df2db-58ed-4c27-97de-0a909bd8b2fe" ContentProperty="2003" PersistedContentName="" AdditionalData="" /&gt;&lt;/Paragraph&gt;&lt;Paragraph /&gt;&lt;/Section&gt;&lt;/FlowDocument&gt;</Value>
+    </Property>
+    <Property>
+      <Name>Importance</Name>
+      <Value>Normal</Value>
+    </Property>
+  </AFDeliveryFormat>
+  <AFNotificationContactTemplate>
+    <Name>Maximo Ticket</Name>
+    <ContactType>Individual</ContactType>
+    <Available>false</Available>
+    <NotifyWhenInstanceEnded>false</NotifyWhenInstanceEnded>
+    <IsInternal>false</IsInternal>
+    <DeliveryChannel>WebService</DeliveryChannel>
+    <ConfigString>AuthenticationOption=Anonymous;HttpMethod=POST;Style=REST;Url=http://10.54.51.132:9000/maxrest/rest/os/MXSR</ConfigString>
+  </AFNotificationContactTemplate>
+  <AFNotificationContactTemplate>
+    <Name>Maximo Update Meter</Name>
+    <ContactType>Individual</ContactType>
+    <Available>false</Available>
+    <NotifyWhenInstanceEnded>false</NotifyWhenInstanceEnded>
+    <IsInternal>false</IsInternal>
+    <DeliveryChannel>WebService</DeliveryChannel>
+    <ConfigString>AuthenticationOption=Anonymous;HttpMethod=POST;Style=REST;Url=http://10.54.51.132:9000/maxrest/rest/os/MXMETERDATA</ConfigString>
+  </AFNotificationContactTemplate>
+  <AFDatabase>
+    <Name>Demo_Maximo_Integration</Name>
+    <AFAttributeCategory>
+      <Name>Calculation</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Demo</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Event</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Maintance</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>MAXIMO</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Meter</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Process</Name>
+    </AFAttributeCategory>
+    <AFTable>
+      <Name>Sites</Name>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="SitesDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="SitesDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sites" msdata:Locale="">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Site" type="xs:string" minOccurs="0" />
+              <xs:element name="Pump" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><SitesDataSet><Sites><Site>BEDFORD</Site><Pump>11430</Pump></Sites><Sites><Site>BEDFORD</Site><Pump>11450</Pump></Sites><Sites><Site>BEDFORD</Site><Pump>11480</Pump></Sites></SitesDataSet></DataTable>
+    </AFTable>
+    <AFEnumerationSet>
+      <Name>Pump State</Name>
+      <AFEnumerationValue>
+        <Name>OFF</Name>
+        <Value>0</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>ON</Name>
+        <Value>1</Value>
+      </AFEnumerationValue>
+    </AFEnumerationSet>
+    <AFElementTemplate>
+      <Name>ConfigurationTemplate</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFAttributeTemplate>
+        <Name>High Temperature</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>Boolean</Type>
+        <Value type="Boolean">False</Value>
+        <AFAttributeCategoryRef>Demo</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Maximo Root URL</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String"></Value>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>PI Data Archive</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">jpede-pida-vm0</Value>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Tag Prefix</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">Maxmio</Value>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Daily Event Frame</Name>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>High Temperature Alert</Name>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <NamingPattern>%TEMPLATE%_%STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <AFAttributeTemplate>
+        <Name>ASSETNUM</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>%element%;</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>DESCRIPTION</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"Pump temperate exceeded threshold limit for 5 concurrent minutes.";"Max Temperature is ";'Max Temperature';</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Max Temperature</Name>
+        <Type>Int32</Type>
+        <Value type="Int32">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Temperature;TimeRangeMethod=Maximum</ConfigString>
+        <AFAttributeCategoryRef>Event</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>REPORTDATE</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>Format(%StartTime%, "yyyy-MM-ddTHH:mm:ss");"+08:00";</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>REPORTEDBY</Name>
+        <Type>String</Type>
+        <Value type="String">OSIUSER</Value>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>SITEID</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Site FROM Sites WHERE Pump = @ASSETNUM ORDER BY Site</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Pump Template</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFElement">Pumps\11430</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>ASSETNUM</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>%element%&#xD;
+</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Flow Rate</Name>
+        <DefaultUOM>L/min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\jpede-pida-vm0\Maximo.%Element%.%Attribute%;pointtype=Float32</ConfigString>
+        <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>INSPECTOR</Name>
+        <Type>String</Type>
+        <Value type="String">OSI</Value>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Last Maintance</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2018-06-11T15:00:00Z</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\jpede-pida-vm0\Maximo.%Element%.%Attribute%;pointtype=Timestamp</ConfigString>
+        <AFAttributeCategoryRef>Maintance</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>NEWREADING</Name>
+        <Type>Int32</Type>
+        <Value type="Int32">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>|RunHours</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>NEWREADINGDATE</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>Format('.|Current Time', "yyyy-MM-ddTHH:mm:ss");"+08:00";</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Current Time</Name>
+          <Type>DateTime</Type>
+          <Value type="DateTime">1970-01-01T00:00:00Z</Value>
+          <DataReference>Analysis</DataReference>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>OnOFF</Name>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Pump State]</TypeQualifier>
+        <Value type="AFEnumerationValue">1b2809e7-2f7c-4126-8b78-5aaf166f48ba?1?ON</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\jpede-pida-vm0\Maximo.%Element%.%Attribute%;pointtype=Int16</ConfigString>
+        <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>RunHours</Name>
+        <DefaultUOM>h</DefaultUOM>
+        <Type>Int32</Type>
+        <Value type="Int32">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.%Element%.%Attribute%;pointtype=Int32</ConfigString>
+        <AFAttributeCategoryRef>Meter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>SITEID</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>'..\|SITEID';</ConfigString>
+        <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Temperature</Name>
+        <DefaultUOM>oC</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.%Element%.%Attribute%;pointtype=Float32</ConfigString>
+        <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Threshold</Name>
+          <Type>Int32</Type>
+          <Value type="Int32">150</Value>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>(Demo Data Generation) Flow Rate Sensor</Name>
+        <Target>Pump Template</Target>
+        <AFExtendedProperty>
+          <Name>AutoRecalculationEnabled</Name>
+          <Value type="Boolean">True</Value>
+        </AFExtendedProperty>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RunningFlag := (Minute('*') &gt; 10 and Minute('*') &lt; 20) or &#xD;
+(Minute('*') &gt; 30 and Minute('*') &lt; 40) or &#xD;
+(Minute('*') &gt; 50 and Minute('*') &lt; 60);&#xD;
+FlowRate := If RunningFlag then Rand(50, 20) else 0;</ConfigString>
+          <VariableMapping>Flow Rate||Flow Rate;[GUID]||{896f3461-99d0-4730-8d00-ac4edca7c1ce};FlowRate||Flow Rate;[GUID]||{896f3461-99d0-4730-8d00-ac4edca7c1ce};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=60</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>(Demo Data Generation) Last Maintance Day</Name>
+        <Target>Pump Template</Target>
+        <AFExtendedProperty>
+          <Name>AutoRecalculationEnabled</Name>
+          <Value type="Boolean">True</Value>
+        </AFExtendedProperty>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>MaintanceToday := Rand() &lt; 0.001;&#xD;
+Variable1 := If MaintanceToday then '*' else NoOutput();</ConfigString>
+          <VariableMapping>Variable1||Last Maintance;[GUID]||{90d2f240-d8e6-493d-b94b-79c90f3ce7f2};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Day=Sun, Mon, Tue, Wed, Thu, Fri, Sat</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>(Demo Data Generation) Temperature sensor</Name>
+        <Target>Pump Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>Temperature := If '\{0432cf73-8669-11e8-a956-000d3a515230};Configuration|{c302a8c1-c0e8-53a4-0712-2a23e5263203};High Temperature' then Rand(160,3) else Rand(40,10);</ConfigString>
+          <VariableMapping>Temperature||Temperature;[GUID]||{3c820dc2-f462-45af-98ec-1a9a6091f6ca};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=5</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Current Time</Name>
+        <Target>Pump Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>'*'</ConfigString>
+          <VariableMapping>Output||NEWREADINGDATE|Current Time;[GUID]||{1ef8aef2-ca72-48cb-ab15-c68b5dd9dfba};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Daily Event Frame</Name>
+        <Target>Pump Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=f3b80146-c2fb-4efc-9715-6533b23696f8;EFTNAME=Daily Event Frame</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>@group("Start triggers") @timetrue("1")&#xD;
+StartTrigger1 := True;&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := True;</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Day=Sun, Mon, Tue, Wed, Thu, Fri, Sat</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>High Temperature Alert</Name>
+        <Target>Pump Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=219f5278-ceb6-4c25-a372-6f3996fbca39;EFTNAME=High Temperature Alert</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>@group("Start triggers") @timetrue("300")&#xD;
+StartTrigger1 := '{3c820dc2-f462-45af-98ec-1a9a6091f6ca};Temperature' &gt; '{3c820dc2-f462-45af-98ec-1a9a6091f6ca};Temperature|{71de6337-1d4b-4dce-ae2a-4eb99272c24c};Threshold';</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>ON OFF</Name>
+        <Target>Pump Template</Target>
+        <AFExtendedProperty>
+          <Name>AutoRecalculationEnabled</Name>
+          <Value type="Boolean">True</Value>
+        </AFExtendedProperty>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>ONOFF := If '{896f3461-99d0-4730-8d00-ac4edca7c1ce};Flow Rate' &gt; 0 then "ON" else "OFF";</ConfigString>
+          <VariableMapping>ONOFF||OnOFF;[GUID]||{35a4b6f3-5c55-4798-8b6f-8f9e7d2dc549};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Run Hour Calculation</Name>
+        <Target>Pump Template</Target>
+        <AFExtendedProperty>
+          <Name>AutoRecalculationEnabled</Name>
+          <Value type="Boolean">True</Value>
+        </AFExtendedProperty>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RunHour := TimeEq('{35a4b6f3-5c55-4798-8b6f-8f9e7d2dc549};OnOFF', '{90d2f240-d8e6-493d-b94b-79c90f3ce7f2};Last Maintance', '*', "On");</ConfigString>
+          <VariableMapping>RunHour||RunHours;[GUID]||{a17761cd-69a7-4c91-a438-f471f5099515};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=60</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFNotificationRuleTemplate>
+        <Name>Create Maximo Ticket</Name>
+        <CreateEnabled>true</CreateEnabled>
+        <Criteria>Template:"High Temperature Alert"</Criteria>
+        <Target>Pump Template</Target>
+        <ContentExample>ElementTemplates[High Temperature Alert]</ContentExample>
+        <AFDeliveryFormat>
+          <Name>New Format</Name>
+          <DeliveryChannel>WebService</DeliveryChannel>
+          <Property>
+            <Name>parameter:ASSETNUM</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"ASSETNUM","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:DESCRIPTION</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"DESCRIPTION","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:REPORTDATE</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"REPORTDATE","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:REPORTEDBY</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"REPORTEDBY","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:SITEID</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"SITEID","PropertyId":3000}}</Value>
+          </Property>
+        </AFDeliveryFormat>
+        <AFDeliveryFormat>
+          <Name>New Format1</Name>
+          <DeliveryChannel>WebService</DeliveryChannel>
+          <Property>
+            <Name>parameter:ASSETNUM</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"ASSETNUM","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:SITEID</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"SITEID","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:DESCRIPTION</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"DESCRIPTION","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:REPORTDATE</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"REPORTDATE","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:REPORTEDBY</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"1e30fb46-1cb7-4fa6-8b11-5d017cf4e944","Name":"REPORTEDBY","PropertyId":3000}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:_action</Name>
+            <Value>{"ParameterType":null,"ValueType":1,"ContentInfo":{"Id":"00000000-0000-0000-0000-000000000000","Name":"AddChange","PropertyId":0}}</Value>
+          </Property>
+        </AFDeliveryFormat>
+        <AFNotificationRuleSubscriber>
+          <Name>Maximo Ticket</Name>
+          <Template>Maximo Ticket</Template>
+          <DeliveryFormat>ElementTemplates[Pump Template]\NotificationRuleTemplates[Create Maximo Ticket]\DeliveryFormats[New Format1]</DeliveryFormat>
+        </AFNotificationRuleSubscriber>
+      </AFNotificationRuleTemplate>
+      <AFNotificationRuleTemplate>
+        <Name>Update Run Hours in Maxmio</Name>
+        <CreateEnabled>true</CreateEnabled>
+        <Criteria>Template:"Daily Event Frame"</Criteria>
+        <Target>Pump Template</Target>
+        <ContentExample>ElementTemplates[Daily Event Frame]</ContentExample>
+        <AFDeliveryFormat>
+          <Name>New Format</Name>
+          <DeliveryChannel>WebService</DeliveryChannel>
+          <Property>
+            <Name>parameter:ASSETNUM</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"02bb2a93-34ec-4cfc-9624-c1fe5caf4287","Name":"ASSETNUM","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:NEWREADING</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"02bb2a93-34ec-4cfc-9624-c1fe5caf4287","Name":"NEWREADING","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:NEWREADINGDATE</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"02bb2a93-34ec-4cfc-9624-c1fe5caf4287","Name":"NEWREADINGDATE","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:METERNAME</Name>
+            <Value>{"ParameterType":null,"ValueType":1,"ContentInfo":{"Id":"00000000-0000-0000-0000-000000000000","Name":"RUNHOURS","PropertyId":0}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:SITEID</Name>
+            <Value>{"ParameterType":null,"ValueType":0,"ContentInfo":{"Id":"02bb2a93-34ec-4cfc-9624-c1fe5caf4287","Name":"SITEID","PropertyId":3005}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:INSPECTOR</Name>
+            <Value>{"ParameterType":null,"ValueType":1,"ContentInfo":{"Id":"00000000-0000-0000-0000-000000000000","Name":"OSI","PropertyId":0}}</Value>
+          </Property>
+          <Property>
+            <Name>parameter:_action</Name>
+            <Value>{"ParameterType":null,"ValueType":1,"ContentInfo":{"Id":"00000000-0000-0000-0000-000000000000","Name":"addChange","PropertyId":0}}</Value>
+          </Property>
+        </AFDeliveryFormat>
+        <AFDeliveryFormat>
+          <Name>New Format1</Name>
+          <DeliveryChannel>WebService</DeliveryChannel>
+        </AFDeliveryFormat>
+        <AFNotificationRuleSubscriber>
+          <Name>Maximo Update Meter</Name>
+          <Template>Maximo Update Meter</Template>
+          <DeliveryFormat>ElementTemplates[Pump Template]\NotificationRuleTemplates[Update Run Hours in Maxmio]\DeliveryFormats[New Format]</DeliveryFormat>
+        </AFNotificationRuleSubscriber>
+      </AFNotificationRuleTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Pumps Collection Template</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFAttributeTemplate>
+        <Name>Current Time</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">0001-01-01 00:00:00Z</Value>
+        <DataReference>Analysis</DataReference>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>SITEID</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">BEDFORD</Value>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>(Data Generation) Daily Event Frame</Name>
+        <Target>Pumps Collection Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=f3b80146-c2fb-4efc-9715-6533b23696f8;EFTNAME=Daily Event Frame</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>@group("Start triggers") @timetrue("60")&#xD;
+StartTrigger1 := True;&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := True;</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=60</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Analysis Template6</Name>
+        <Target>Pumps Collection Template</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>'*'</ConfigString>
+          <VariableMapping>Output||Current Time;[GUID]||{67ea6a44-7062-4c29-ae9f-56a22bb6215f};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=60</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElement>
+      <Name>BEDFORD</Name>
+      <Template>Pumps Collection Template</Template>
+      <AFAttribute>
+        <Name>Current Time</Name>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>SITEID</Name>
+      </AFAttribute>
+      <AFAnalysis>
+        <Name>(Data Generation) Daily Event Frame</Name>
+        <Template>(Data Generation) Daily Event Frame</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>BEDFORD</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Analysis Template6</Name>
+        <Template>Analysis Template6</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>BEDFORD</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+    <AFElement>
+      <Name>Configuration</Name>
+      <Template>ConfigurationTemplate</Template>
+      <AFAttribute>
+        <Name>High Temperature</Name>
+        <Timestamp>2018-07-30T00:58:09.6409519Z</Timestamp>
+        <Value type="Boolean">True</Value>
+        <AFAttributeCategoryRef>Demo</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Maximo Root URL</Name>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>PI Data Archive</Name>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Tag Prefix</Name>
+      </AFAttribute>
+    </AFElement>
+    <AFElement>
+      <Name>Pumps</Name>
+      <Template>Pumps Collection Template</Template>
+      <AFAttribute>
+        <Name>Current Time</Name>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>SITEID</Name>
+      </AFAttribute>
+      <AFElement ReferenceType="Composition">
+        <Name>11430</Name>
+        <Template>Pump Template</Template>
+        <AFAttribute>
+          <Name>ASSETNUM</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.1140.Flow Rate?2277</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>INSPECTOR</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Last Maintance</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11430.Last Maintance?2287</ConfigString>
+          <AFAttributeCategoryRef>Maintance</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADING</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADINGDATE</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OnOFF</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11430.OnOFF?2279</ConfigString>
+          <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11430.RunHours?2280</ConfigString>
+          <AFAttributeCategoryRef>Meter</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>SITEID</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Temperature</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11430.Temperature?2294</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Flow Rate Sensor</Name>
+          <Template>(Demo Data Generation) Flow Rate Sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Last Maintance Day</Name>
+          <Template>(Demo Data Generation) Last Maintance Day</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Temperature sensor</Name>
+          <Template>(Demo Data Generation) Temperature sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Current Time</Name>
+          <Template>Current Time</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Daily Event Frame</Name>
+          <Template>Daily Event Frame</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Temperature Alert</Name>
+          <Template>High Temperature Alert</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>ON OFF</Name>
+          <Template>ON OFF</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Run Hour Calculation</Name>
+          <Template>Run Hour Calculation</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11430</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFNotificationRule>
+          <Name>Create Maximo Ticket</Name>
+          <Status>Enabled</Status>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Create Maximo Ticket]</Template>
+          <ContentExample>ElementTemplates[High Temperature Alert]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Ticket</Name>
+            <Template>Maximo Ticket</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+        <AFNotificationRule>
+          <Name>Update Run Hours in Maxmio</Name>
+          <Status>Enabled</Status>
+          <Criteria>Template:"Daily Event Frame"</Criteria>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Update Run Hours in Maxmio]</Template>
+          <ContentExample>ElementTemplates[Daily Event Frame]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Update Meter</Name>
+            <Template>Maximo Update Meter</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+      </AFElement>
+      <AFElement ReferenceType="Composition">
+        <Name>11450</Name>
+        <Template>Pump Template</Template>
+        <AFAttribute>
+          <Name>ASSETNUM</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11450.Flow Rate?2285</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>INSPECTOR</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Last Maintance</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11450.Last Maintance?2288</ConfigString>
+          <AFAttributeCategoryRef>Maintance</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADING</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADINGDATE</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OnOFF</Name>
+          <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours</Name>
+          <AFAttributeCategoryRef>Meter</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>SITEID</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Temperature</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11450.Temperature?2296</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Flow Rate Sensor</Name>
+          <Template>(Demo Data Generation) Flow Rate Sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Last Maintance Day</Name>
+          <Template>(Demo Data Generation) Last Maintance Day</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Temperature sensor</Name>
+          <Template>(Demo Data Generation) Temperature sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Current Time</Name>
+          <Template>Current Time</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Daily Event Frame</Name>
+          <Template>Daily Event Frame</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Temperature Alert</Name>
+          <Template>High Temperature Alert</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>ON OFF</Name>
+          <Template>ON OFF</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Run Hour Calculation</Name>
+          <Template>Run Hour Calculation</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11450</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFNotificationRule>
+          <Name>Create Maximo Ticket</Name>
+          <Status>Enabled</Status>
+          <Criteria>Template:"High Temperature Alert"</Criteria>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Create Maximo Ticket]</Template>
+          <ContentExample>ElementTemplates[High Temperature Alert]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Ticket</Name>
+            <Template>Maximo Ticket</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+        <AFNotificationRule>
+          <Name>Update Run Hours in Maxmio</Name>
+          <Status>Enabled</Status>
+          <Criteria>Template:"Daily Event Frame"</Criteria>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Update Run Hours in Maxmio]</Template>
+          <ContentExample>ElementTemplates[Daily Event Frame]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Update Meter</Name>
+            <Template>Maximo Update Meter</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+      </AFElement>
+      <AFElement ReferenceType="Composition">
+        <Name>11480</Name>
+        <Template>Pump Template</Template>
+        <AFAttribute>
+          <Name>ASSETNUM</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11480.Flow Rate?2281</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>INSPECTOR</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Last Maintance</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11480.Last Maintance?2289</ConfigString>
+          <AFAttributeCategoryRef>Maintance</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADING</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>NEWREADINGDATE</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OnOFF</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11480.OnOFF?2282</ConfigString>
+          <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11480.RunHours?2283</ConfigString>
+          <AFAttributeCategoryRef>Meter</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>SITEID</Name>
+          <AFAttributeCategoryRef>MAXIMO</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Temperature</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\jpede-pida-vm0?0ba6428c-7736-4930-9523-2d0a02a1677e\Maximo.11480.Temperature?2295</ConfigString>
+          <AFAttributeCategoryRef>Process</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Flow Rate Sensor</Name>
+          <Template>(Demo Data Generation) Flow Rate Sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Last Maintance Day</Name>
+          <Template>(Demo Data Generation) Last Maintance Day</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>(Demo Data Generation) Temperature sensor</Name>
+          <Template>(Demo Data Generation) Temperature sensor</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Current Time</Name>
+          <Template>Current Time</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Daily Event Frame</Name>
+          <Template>Daily Event Frame</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Temperature Alert</Name>
+          <Template>High Temperature Alert</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>ON OFF</Name>
+          <Template>ON OFF</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Run Hour Calculation</Name>
+          <Template>Run Hour Calculation</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>Pumps\11480</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFNotificationRule>
+          <Name>Create Maximo Ticket</Name>
+          <Status>Enabled</Status>
+          <Criteria>Template:"High Temperature Alert"</Criteria>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Create Maximo Ticket]</Template>
+          <ContentExample>ElementTemplates[High Temperature Alert]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Ticket</Name>
+            <Template>Maximo Ticket</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+        <AFNotificationRule>
+          <Name>Update Run Hours in Maxmio</Name>
+          <Status>Enabled</Status>
+          <Criteria>Template:"Daily Event Frame"</Criteria>
+          <Template>ElementTemplates[Pump Template]\NotificationRuleTemplates[Update Run Hours in Maxmio]</Template>
+          <ContentExample>ElementTemplates[Daily Event Frame]</ContentExample>
+          <AFNotificationRuleSubscriber>
+            <Name>Maximo Update Meter</Name>
+            <Template>Maximo Update Meter</Template>
+          </AFNotificationRuleSubscriber>
+        </AFNotificationRule>
+      </AFElement>
+      <AFAnalysis>
+        <Name>(Data Generation) Daily Event Frame</Name>
+        <Template>(Data Generation) Daily Event Frame</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>Pumps</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Analysis Template6</Name>
+        <Template>Analysis Template6</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>Pumps</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+  </AFDatabase>
+</AF>
